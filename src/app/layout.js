@@ -15,9 +15,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <Navbar />
-      <body className={`${epilogue.variable}  antialiased`}>{children}</body>
+    <html lang="en" className={epilogue.variable}>
+      <body className="relative not-last:antialiased">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-const HeadserSection = () => {
+const HeaderSection = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-800 flex items-center justify-between px-14 ">
+    <div className="w-full min-h-screen bg-gray-800 flex items-center justify-between px-14">
       <div className="flex flex-col gap-6">
         <h1 className="text-5xl text-white font-bold">Hello, I'm John Doe</h1>
         <p className="text-gray-300 text-lg">
@@ -24,4 +24,4 @@ const HeadserSection = () => {
   );
 };
 
-export default HeadserSection;
+export default HeaderSection;
