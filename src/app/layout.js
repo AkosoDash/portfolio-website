@@ -1,11 +1,11 @@
-import { Epilogue } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/ui/Navbar";
+import Navbar from "@/components/shared-components/Navbar";
 
-const epilogue = Epilogue({
+const geist = Geist({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-epilogue",
+  variable: "--font-geist",
 });
 
 export const metadata = {
@@ -15,8 +15,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={epilogue.variable}>
-      <body className="relative not-last:antialiased">
+    <html lang="en" className={geist.variable}>
+      <body className="relative not-last:antialiased bg-black">
         <Navbar />
         {children}
       </body>

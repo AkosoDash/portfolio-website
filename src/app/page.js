@@ -1,10 +1,12 @@
-import HeaderSection from "@/components/ui/HeaderSection";
+import HeaderSection from "@/components/page/HomePage/BannerSection";
+import ProjectSection from "@/components/page/HomePage/ProjectSection";
+import ContentWrapper from "@/components/shared-components/ContentWrapper";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <ContentWrapper>
       <HeaderSection />
-      <HeaderSection />
-    </div>
+      <ProjectSection />
+    </ContentWrapper>
   );
 }

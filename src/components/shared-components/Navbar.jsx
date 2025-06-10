@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { Button } from "./button";
 import { Icon } from "@iconify/react";
+import { Button } from "../ui/button";
 
 const Navbar = () => {
   return (
-    <div className="w-full flex justify-center fixed top-8">
-      <div className="bg-[#212121] font-semibold w-[calc(100%-64px)] py-4 px-8 flex flex-row justify-between items-center  rounded-md">
+    <div className="w-full flex justify-center fixed top-8 z-50">
+      <div className="bg-[#212121] border border-white/10 shadow-xl font-semibold w-[calc(100%-256px)] py-4 px-8 flex flex-row justify-between items-center rounded-lg">
         <div className="flex gap-4 items-center justify-center ">
           <div className="relative group">
             <Link
