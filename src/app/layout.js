@@ -1,11 +1,12 @@
-import { Geist } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared-components/Navbar";
 
-const geist = Geist({
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"], // sesuaikan dengan kebutuhan
   display: "swap",
-  variable: "--font-geist",
+  variable: "--font-poppins",
 });
 
 export const metadata = {
@@ -15,8 +16,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={geist.variable}>
-      <body className="relative not-last:antialiased bg-black">
+    <html lang="en" className={poppins.variable}>
+      <body className="relative not-last:antialiased bg-black font-sans">
         <Navbar />
         {children}
       </body>

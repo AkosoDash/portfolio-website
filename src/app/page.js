@@ -1,5 +1,6 @@
 import HeaderSection from "@/components/page/HomePage/BannerSection";
 import ProjectSection from "@/components/page/HomePage/ProjectSection";
+import WorkSection from "@/components/page/HomePage/WorkSection";
 import ContentWrapper from "@/components/shared-components/ContentWrapper";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <ContentWrapper>
       <HeaderSection />
       <ProjectSection />
+      <WorkSection />
     </ContentWrapper>
   );
 }

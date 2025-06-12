@@ -3,12 +3,12 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProjectSection = () => {
-  const landingPageData = [
+const WorkSection = () => {
+  const workExperienceData = [
     {
       id: 1,
-      title: "Landingpage Nonton+",
-      category: "Hospitality, Hotel, Business",
+      title: "PT. Semua Aplikasi Indonesia (Internship)",
+      category: "Februari 2024 - Juni 2024",
       image:
         "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/150/2025/03/10/WhatsApp-Image-2025-03-10-at-061745-3402171774.jpeg",
       link: "/",
@@ -16,30 +16,21 @@ const ProjectSection = () => {
     },
     {
       id: 2,
-      title: "Dashboard Travel Ziarah",
-      category: "Tour & Travel, Religion",
+      title: "Bimbingan Belajar Himalaya (Part Time)",
+      category: "August 2023 - Current",
       image:
-        "https://images.unsplash.com/photo-1509223197845-458d87318791?auto=format&fit=crop&w=600&q=80",
-      link: "https://nonton.id",
-      private: false,
-    },
-    {
-      id: 3,
-      title: "Sistem IPTV - Nonton+ Website",
-      category: "Hospitality, Reservation",
-      image:
-        "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
-      link: "/booking",
+        "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/150/2025/03/10/WhatsApp-Image-2025-03-10-at-061745-3402171774.jpeg",
+      link: "/",
       private: true,
     },
     {
-      id: 4,
-      title: "Landingpage Online Course",
-      category: "Education, E-learning",
+      id: 3,
+      title: "PT. Semua Aplikasi Indonesia",
+      category: "September 2025 - Current",
       image:
-        "https://images.unsplash.com/photo-1540292618247-e7fc8c43c709?q=80&w=1473&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      link: "/course",
-      private: false,
+        "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/150/2025/03/10/WhatsApp-Image-2025-03-10-at-061745-3402171774.jpeg",
+      link: "/",
+      private: true,
     },
   ];
 
@@ -47,7 +38,7 @@ const ProjectSection = () => {
     <div className="bg-[#252525] border border-white/10 w-auto m-4 p-8 flex flex-col gap-y-2 rounded-lg">
       <div className="flex items-center justify-between mb-4">
         <div className="w-fit py-2 rounded-full text-gray-300 font-bold text-2xl">
-          <span>Project</span>
+          <span>Work Experience</span>
         </div>
         <Button
           className={
@@ -58,8 +49,8 @@ const ProjectSection = () => {
           <Icon icon={"ic:round-chevron-right"} className=" size-4" />
         </Button>
       </div>
-      <div className="w-full grid grid-cols-1 lg:grid-cols-2 gap-4">
-        {landingPageData.map((item) => (
+      <div className="w-full grid grid-cols-1 gap-4">
+        {workExperienceData.map((item) => (
           <Button
             key={item.id}
             className="bg-[#313131] border-4 border-[#313131] hover:border-[#292929] hover:shadow-gray-500/10 shadow-lg hover:bg-[#313131] h-auto w-full p-3 flex flex-row items-center justify-between gap-4 rounded-lg transition-all duration-300"
@@ -75,7 +66,10 @@ const ProjectSection = () => {
             </div>
             <div className="flex-1 text-start space-y-2 text-gray-300">
               <div className="text-xl font-semibold">{item.title}</div>
-              <div className="text-md font-normal">{item.category}</div>
+              <div className="text-sm font-medium flex items-center gap-x-2">
+                <Icon icon={"hugeicons:work-history"} />
+                {item.category}
+              </div>
             </div>
             <div className="relative group">
               <Link
@@ -92,12 +86,14 @@ const ProjectSection = () => {
                   className="size-4"
                 />
               </Link>
-              <div
-                className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-xs 
+              {item.private && (
+                <div
+                  className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-xs 
            px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              >
-                {item.private ? "Private" : item.link}
-              </div>
+                >
+                  Private
+                </div>
+              )}
             </div>
           </Button>
         ))}
@@ -106,4 +102,4 @@ const ProjectSection = () => {
   );
 };
 
-export default ProjectSection;
+export default WorkSection;
