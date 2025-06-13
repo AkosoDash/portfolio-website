@@ -11,9 +11,8 @@ const ProjectSection = () => {
       category: "Hospitality, Hotel, Business",
       image:
         "https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/150/2025/03/10/WhatsApp-Image-2025-03-10-at-061745-3402171774.jpeg",
-      link: "https://nonton.id",
-
-      private: false,
+      link: "/",
+      private: true,
     },
     {
       id: 2,
@@ -21,7 +20,7 @@ const ProjectSection = () => {
       category: "Hospitality, Reservation",
       image:
         "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80",
-      link: "/",
+      link: "https://nonton.id",
       private: true,
     },
     {
@@ -95,8 +94,8 @@ const ProjectSection = () => {
                 />
               </Link>
               <div
-                className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-[#212121] text-white text-xs ring ring-white/10
-           px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-1 max-w-40 text-ellipsis"
+                className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-xs 
+           px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
                 {item.private ? "Private" : item.link}
               </div>
