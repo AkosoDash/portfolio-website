@@ -1,12 +1,12 @@
-import ProfileSection from "@/components/page/AboutMePage/ProfileSection";
-import ProjectSection from "@/components/page/HomePage/ProjectSection";
+import ProjectSection from "@/components/page/ProjectPage/ProjectSection";
+import HeaderSection from "@/components/page/ProjectPage/HeaderSection";
 import ContentWrapper from "@/components/shared-components/ContentWrapper";
 import Footer from "@/components/shared-components/Footer";
 
-export default function AboutMePage() {
+export default function ProjectPage() {
   return (
     <ContentWrapper>
-      <ProfileSection />
+      <HeaderSection />
       <ProjectSection />
       <Footer />
     </ContentWrapper>
